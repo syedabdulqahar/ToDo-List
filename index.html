@@ -57,6 +57,25 @@
       margin: 0px;
       padding: 10px;
     }
+    @media (max-width: 500px){
+      .output{
+        flex-direction: column;
+        width: 100%;
+      }
+      .output1{
+        width: 80%;
+      }
+      .ButtonDiv{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
+      .firstBlock p Button{
+
+      }
+      
+    }
     
   </style>
 </head>
@@ -65,7 +84,7 @@
   <p class="firstBlock" style=" font-weight: bold; padding: 20px; font-size: 20px; color: rgb(250, 250, 250);">
     Todo : <input class="input inputCSS" type="text" >
     <p>
-      <Button style="width: 100px; padding: 10px; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white ; background-color: green;" onclick="AddTodo();">Add</Button>
+      <Button class="AddButton" style="width: 130px; margin-left: 40px; padding: 10px; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white ; background-color: green;" onclick="AddTodo();">Add</Button>
     </p>  
   </p>
     <div class="output1"></div>
@@ -94,7 +113,7 @@ function renderTodos(){
     outputElement.innerHTML+=`
         <div class="output">
           ${arr[i]}
-          <p >
+          <p class="ButtonDiv">
             <button class="btn btn-Delete" onclick="DeleteTodo(${i})">
               Delete  
             </button>
